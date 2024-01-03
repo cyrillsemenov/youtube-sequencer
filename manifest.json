@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Sequencer",
+    "description": "The YouTube Sequencer Chrome Extension offers an interactive tool for customizing video playback speeds and sequences on YouTube.",
+    "version": "0.9",
+    "icons": {
+        "16": "logo/logo-16.png",
+        "48": "logo/logo-48.png",
+        "128": "logo/logo-128.png"
+    },
+    "permissions": ["activeTab", "scripting", "storage"],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "content_scripts": [{
+        "js": ["app/sequencer_ui.js", "app/sequencer.js"],
+        "css": ["app/sequencer.css"],
+        "matches": ["*://*.youtube.com/watch?v=*"],
+        "world": "MAIN"
+    }]
+}
