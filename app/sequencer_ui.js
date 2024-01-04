@@ -77,6 +77,9 @@ class SequencerUI {
         const value = Number(target.value, 10);
         let step = this.sequencer.sequence[stepNumber];
         step[attr] = value;
+        if (attr == 'speedMarker') {
+            step['actualSpeed'] = this.sequencer.calculateSpeed(value);
+        }
         this.sequencer.sequence[stepNumber] = step;
         console.debug(
             `Attribute "${attr}" of step "${stepNumber}" changed to "${value}".`
