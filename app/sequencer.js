@@ -23,6 +23,8 @@ class Sequencer {
     this.setTempo(tempo);
 
     this.video = document.querySelector("video");
+
+    this.load();
   }
 
   save() {
