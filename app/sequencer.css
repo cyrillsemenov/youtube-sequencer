@@ -32,14 +32,16 @@
 }
 
 .grid-item.current-step {
-    background: #FFEB3B;
+    background: #ffeb3b;
     border-radius: 8px;
     padding: 3px;
     border: solid hsl(0, 0%, 40%) 2px;
     /* box-sizing: border-box; */
 }
 
-#seq-container input, #seq-container button, #seq-container select {
+#seq-container input,
+#seq-container button,
+#seq-container select {
     font-family: 'JetBrains Mono';
     border: 2px solid #000;
     border-radius: 5px;
@@ -70,7 +72,8 @@
     margin-top: 0;
 }
 
-#add-step input, #add-step select {
+#add-step input,
+#add-step select {
     background: hsl(0, 0%, 40%);
     color: #fff;
     padding: 1px 16px 1px 2px;
@@ -88,8 +91,8 @@ button.btn-del {
     color: #fff;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button  { 
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
     width: 1rem;
     position: absolute;
     top: 0;

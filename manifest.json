@@ -9,13 +9,13 @@
         "128": "logo/logo-128.png"
     },
     "permissions": ["activeTab", "scripting", "storage"],
-    "host_permissions": [
-        "*://*/*"
-    ],
-    "content_scripts": [{
-        "js": ["app/sequencer_ui.js", "app/sequencer.js"],
-        "css": ["app/sequencer.css"],
-        "matches": ["*://*.youtube.com/watch?v=*"],
-        "world": "MAIN"
-    }]
+    "host_permissions": ["*://*/*"],
+    "content_scripts": [
+        {
+            "js": ["app/sequencer_ui.js", "app/sequencer.js"],
+            "css": ["app/sequencer.css"],
+            "matches": ["*://*.youtube.com/watch?v=*"],
+            "world": "MAIN"
+        }
+    ]
 }
