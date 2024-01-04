@@ -78,7 +78,9 @@ class SequencerUI {
     let step = this.sequencer.sequence[stepNumber];
     step[attr] = value;
     this.sequencer.sequence[stepNumber] = step;
-    console.debug(`Attribute "${attr}" of step "${stepNumber}" changed to "${value}".`);
+    console.debug(
+      `Attribute "${attr}" of step "${stepNumber}" changed to "${value}".`
+    );
     this.sequencer.save();
   };
 
@@ -114,7 +116,7 @@ class SequencerUI {
       length: Number(document.getElementById("new-len").value),
     };
     this.addStepToUI(step);
-    step.speedMarker = this.calculateSpeed(step.speedMarker);
+    // step.speedMarker = this.calculateSpeed(step.speedMarker);
     this.sequencer.addStep(step);
   }
 
@@ -128,17 +130,11 @@ class SequencerUI {
   }
 
   #addSpeedInput(parent, step) {
-    this.#createInput(parent, "_speed", {
+    this.#createInput(parent, "speedMarker", {
       min: 0,
       max: 100,
       value: step.speedMarker,
-      onchange: (e) => {
-        const target = e.currentTarget;
-        target.nextSibling.value = this.calculateSpeed(target.value);
-        target.nextSibling.dispatchEvent(new Event("change"));
-      },
     });
-    this.#createInput(parent, "speedMarker", { style: { display: "none" } });
   }
 
   #addCorrectionInput(parent, step) {

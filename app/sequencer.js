@@ -40,8 +40,15 @@ class Sequencer {
     if (savedSequence) {
       Object.assign(this, JSON.parse(savedSequence));
       console.log("Sequence was loaded.");
-      this.ui.drawGrid();
     }
+    for (let i = 0; i < this.sequence.length; i++) {
+      this.sequence[i].actualSpeed = this.calculateSpeed(this.sequence[i].speedMarker);
+    }
+  }
+
+  calculateSpeed(value) {
+    let result = 0.0625 * Math.pow(1.05701804056138037868, value);
+    return Math.round(result * 10000) / 10000;
   }
 
   setTempo(bpm) {
@@ -49,6 +56,7 @@ class Sequencer {
   }
 
   addStep(step) {
+    step.actualSpeed = this.calculateSpeed(step.speedMarker);
     this.sequence.push(step);
     this.save();
   }
@@ -61,7 +69,7 @@ class Sequencer {
     this.simulateKeyPress("0123456789".charCodeAt(step.value));
     // const speedDir = step.speedMarker > 0 ? 188 : 190;
     const correctionDir = "jl".charCodeAt(Number(step.correction > 0));
-    this.video.playbackRate = step.speedMarker;
+    this.video.playbackRate = step.actualSpeed;
     // for (let i = 0; i < Math.abs(step.speedMarker); i++) {
     //   this.simulateKeyPress(speedDir, true);
     // }
