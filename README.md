@@ -2,7 +2,9 @@
 
 > The YouTube Sequencer Chrome Extension offers an interactive tool for customizing video playback speeds and sequences on YouTube.
 
-I initially began this project as a simple keystroke emulator for creating sequences from YouTube videos, but it has evolved into a more complex tool. This extension allows for intricate control over YouTube video playback, enabling users to select specific slices of a video to play and adjust the sequence tempo. Users can also change the current note length (ranging from 1/16t to 1/2d) and modify the playback speed, which is mapped exponentially from 0.0625 to 16 over a range of 0 to 100. Sequences are persistent, meaning they can be saved and accessed even after a page reload.
+I initially began this project as a simple keystroke emulator for creating sequences from YouTube videos, but it has evolved into a more complex tool. First prototype was made years ago using [puredata](https://github.com/pure-data/pure-data).
+
+This extension allows for intricate control over YouTube video playback, enabling users to select specific slices of a video to play and adjust the sequence tempo. Users can also change the current note length (ranging from 1/16t to 1/2d) and modify the playback speed, which is mapped exponentially from 0.0625 to 16 over a range of 0 to 100. Sequences are persistent, meaning they can be saved and accessed even after a page reload.
 
 > [!CAUTION]
 > Currently, this project is in the proof-of-concept stage, and as such, encountering bugs is expected.
@@ -27,3 +29,8 @@ I initially began this project as a simple keystroke emulator for creating seque
 - [ ] Save and load "dialogues". Save multiple sequences, store the video id sequence made for, comments and slices data.
 - [ ] Create a bot that visits the specified video, downloads it, analyzes the audio data to find transients, and posts a comment with the timecodes of these transients.
 - [ ] Transition the extension's architecture from using a fully injected script to incorporating a side panel interface.
+
+## Links
+
+- [Chrome extension boilerblate](https://github.com/SimGus/chrome-extension-v3-starter)
+- [Inspiration: github.com/klntsky/youtubecore](https://github.com/klntsky/youtubecore)
