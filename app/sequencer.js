@@ -70,14 +70,14 @@ class Sequencer {
         this.interval = this.tempo * indexToFraction[step.length];
         this.simulateKeyPress('0123456789'.charCodeAt(step.value));
         // const speedDir = step.speedMarker > 0 ? 188 : 190;
-        const correctionDir = 'jl'.charCodeAt(Number(step.correction > 0));
+        // const correctionDir = 'jl'.charCodeAt(Number(step.correction > 0));
         this.video.playbackRate = step.actualSpeed;
         // for (let i = 0; i < Math.abs(step.speedMarker); i++) {
         //   this.simulateKeyPress(speedDir, true);
         // }
-        for (let i = 0; i < Math.abs(step.correction); i++) {
-            this.simulateKeyPress(correctionDir);
-        }
+        // for (let i = 0; i < Math.abs(step.correction); i++) {
+        //     this.simulateKeyPress(correctionDir);
+        // }
     }
 
     simulateKeyPress(keyCode, shiftKey = false) {

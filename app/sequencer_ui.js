@@ -118,7 +118,7 @@ class SequencerUI {
         const step = {
             value: Number(document.getElementById('new-value').value),
             speedMarker: Number(document.getElementById('new-speed').value),
-            correction: Number(document.getElementById('new-corr').value),
+            // correction: Number(document.getElementById('new-corr').value),
             length: Number(document.getElementById('new-len').value),
         };
         this.addStepToUI(step);
