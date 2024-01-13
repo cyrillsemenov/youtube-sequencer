@@ -198,7 +198,7 @@ class SequencerUI {
         <label for="new-value">Value</label>
         <input type="number" value="0" id="new-value" min="0" max="9">
         <input type="number" value="50" id="new-speed">
-        <input type="number" value="0" id="new-corr">
+        <!-- <input type="number" value="0" id="new-corr"> -->
         <select id="new-len" name="len">
             <option value=0>1/16t</option>
             <option value=1>1/16</option>
