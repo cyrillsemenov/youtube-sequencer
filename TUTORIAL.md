@@ -4,7 +4,7 @@ Hello everyone! Today, I'm going to show you how to install a YouTube sequencer,
 
 :tv: Cursed af demo: [youtu.be/wlM8Nid6TB4](https://youtu.be/wlM8Nid6TB4)
 
-::tv:: Drums only: [youtu.be/Gsdp_9f0usE](https://youtu.be/Gsdp_9f0usE)
+:tv: Drums only: [youtu.be/Gsdp_9f0usE](https://youtu.be/Gsdp_9f0usE)
 
 - [Downloading the Tool](#downloading-the-tooldownloading)
 - [Setting Up in Chrome](#setting-up-in-chrome)
