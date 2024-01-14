@@ -2,7 +2,11 @@
 
 > The YouTube Sequencer Chrome Extension offers an interactive tool for customizing video playback speeds and sequences on YouTube.
 
-[![Youtube Demo (Cursed one)](https://img.youtube.com/vi/wlM8Nid6TB4/maxresdefault.jpg)](https://youtu.be/wlM8Nid6TB4)
+:page_facing_up: [Tutorial](TUTORIAL.md)
+
+:tv: [Video tutorial](https://youtu.be/vSqUxEtbNO8)
+
+:tv: [Demo](https://youtu.be/wlM8Nid6TB4)
 
 I initially began this project as a simple keystroke emulator for creating sequences from YouTube videos, but it has evolved into a more complex tool. First prototype was made years ago using [puredata](https://github.com/pure-data/pure-data).
 
